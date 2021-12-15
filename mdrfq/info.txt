@@ -1,0 +1,5 @@
+The original MDRFQ Automated Market Makers were written in January 2020 as extremely crude QA tools.
+
+They desperately need to be updated and I wouldn't recommend basing/working from them.
+
+Here is a link to their home in the Paradigm Code Sample repo: https://github.com/tradeparadigm/code-samples/tree/main/python/api/drfq/market_maker

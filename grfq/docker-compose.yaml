@@ -1,0 +1,26 @@
+version: '3'
+services:
+  ## Test AMMs
+  grfq-amm-test-1:
+   image: <your-image-name>:latest
+   deploy:
+    restart_policy:
+      condition: on-failure
+   environment:
+   - PYTHONUNBUFFERED=1
+   - PARADIGM_ENVIRONMENT=test
+   - LOGGING_LEVEL=info
+   - PARADIGM_MAKER_ACCOUNT_NAME=<venue-api-key-name-on-paradigm>
+   - PARADIGM_MAKER_ACCESS_KEY=<access-key>
+   - PARADIGM_MAKER_SECRET_KEY=<secret-key>
+   - PARADIGM_BBO_ACCESS_KEY=<access-key>
+   - PARADIGM_BBO_SECRET_KEY=<secret-key>
+   - PARADIGM_PRICING_ACCESS_KEY=<access-key>
+   - PARADIGM_PRICING_SECRET_KEY=<secret-key>
+   - QUOTE_QUANTITY_LOWER_BOUNDARY=0
+   - QUOTE_QUANTITY_HIGHER_BOUNDARY=5
+   - QUOTE_PRICE_LOWER_BOUNDARY=0
+   - QUOTE_PRICE_HIGHER_BOUNDARY=10
+   - QUOTE_REFRESH_LOWER_BOUNDARY=3
+   - QUOTE_REFRESH_HIGHER_BOUNDARY=5
+  

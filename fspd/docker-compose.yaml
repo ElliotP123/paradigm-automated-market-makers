@@ -1,0 +1,23 @@
+version: '3'
+services:
+  # FSPD Auto Maker Makers
+  # Test
+  fspd-amm-test-1:
+     image: elliotp1234/fspdamm:latest
+     deploy:
+      restart_policy:
+        condition: on-failure
+     environment:
+     - PYTHONUNBUFFERED=1
+     - PARADIGM_ENVIRONMENT=TEST
+     - LOGGING_LEVEL=INFO
+     - PARADIGM_MAKER_ACCOUNT_NAME=<venue-api-key-name-on-paradigm>
+     - PARADIGM_MAKER_ACCESS_KEY=<access-key>
+     - PARADIGM_MAKER_SECRET_KEY=<secret-key>
+     - ORDER_NUMBER_PER_SIDE=1
+     - QUOTE_QUANTITY_LOWER_BOUNDARY=50
+     - QUOTE_QUANTITY_HIGHER_BOUNDARY=1000
+     - QUOTE_PRICE_LOWER_BOUNDARY=0
+     - QUOTE_PRICE_HIGHER_BOUNDARY=0
+     - QUOTE_REFRESH_LOWER_BOUNDARY=5
+     - QUOTE_REFRESH_HIGHER_BOUNDARY=10
